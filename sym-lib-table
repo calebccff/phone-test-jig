@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name custom-symbols)(type Legacy)(uri ${KIPRJMOD}/libs/custom-symbols.lib)(options "")(descr ""))
+  (lib (name Atmega32u4)(type Legacy)(uri ${KIPRJMOD}/libs/ATmega32U4.lib)(options "")(descr ""))
+  (lib (name eec)(type Legacy)(uri "${KIPRJMOD}/libs/IC_Texas Instruments_LSF0102YZTR/eec.lib")(options "")(descr ""))
+)

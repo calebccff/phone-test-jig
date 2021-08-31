@@ -1,0 +1,82 @@
+
+(rules PCB op6-jig
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (eu.mihosoft.freerouting.autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 1)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.0)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.0)
+    )
+  )
+  (rule
+    (width 250.0)
+    (clear 200.2)
+    (clear 125.0 (type smd_to_turn_gap))
+    (clear 50.0 (type smd_smd))
+  )
+  (padstack "Via[0-1]_800:400_um"
+    (shape
+      (circle F.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_800:400_um" "Via[0-1]_800:400_um" default
+  )
+  (via 
+    "Via[0-1]_800:400_um-kicad_default" "Via[0-1]_800:400_um" "kicad_default"
+  )
+  (via_rule
+    default "Via[0-1]_800:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_800:400_um-kicad_default"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    GND /5v OSC2 OSC1 "Net-(C4-Pad1)" "Net-(D1-Pad1)" "PHONE_RX" "PHONE_TX"
+    "PHONE_VBUS" "PHONE_USB_DN" "PHONE_USB_DP" "PHONE_USB_CC" VBAT "VOL_DOWN" "VOL_UP" "PWR_BTN"
+    "BOOT_MODE_0" "BOOT_MODE_1" "Net-(H14-Pad1)" "Net-(H15-Pad1)" "Net-(H16-Pad1)" "Net-(H17-Pad1)" "JTAG_TCK" "Net-(R3-Pad1)"
+    RESET "Net-(P1-PadA6)" "Net-(R5-Pad1)" "Net-(P1-PadA7)" "Net-(R6-Pad1)" /1.8v "Net-(R9-Pad2)" "Net-(R10-Pad2)"
+    "Net-(R11-Pad2)" INT6 "Net-(U1-Pad20)" "Net-(U1-Pad21)" "Net-(U1-Pad26)" "Net-(U1-Pad27)" HWB "JTAG_TDI"
+    "JTAG_TCO" "JTAG_TMS" "Net-(U1-Pad40)" "Net-(U1-Pad41)" "Net-(D2-Pad1)" "Net-(D3-Pad1)" "Net-(P1-PadB5)" "Net-(P1-PadA5)"
+    "Net-(P2-PadB5)" "Net-(J1-Pad12)" "Net-(J2-Pad8)" "Net-(J2-Pad7)" "PHONE_VBUS_SWITCHED" "VBUS_EN" "Net-(J1-Pad16)" "Net-(J1-Pad4)"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)

@@ -1,0 +1,5 @@
+(fp_lib_table
+  (lib (name op6-jig)(type KiCad)(uri ${KIPRJMOD}/libs/op6-jig.pretty)(options "")(descr ""))
+  (lib (name Atmega32u4)(type KiCad)(uri ${KIPRJMOD}/libs/ATmega32U4.pretty)(options "")(descr ""))
+  (lib (name eec)(type KiCad)(uri "${KIPRJMOD}/libs/IC_Texas Instruments_LSF0102YZTR/eec.pretty")(options "")(descr ""))
+)

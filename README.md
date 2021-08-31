@@ -18,3 +18,9 @@ boot into EDL mode instead, so without a way to control VBUS the device would ju
 MOSFET.
 
 > **NOTE:** Currently waiting for PCB shipment, expect this design to contain bugs.
+
+## TODO
+
+* Fix differential pair routing
+* Add support for more devices by using a daughter board for the test points
+* Add PHONE_USB passthrough port so that devices without USB test points can still have VBUS be controlled by the atmega

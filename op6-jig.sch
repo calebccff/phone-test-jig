@@ -16,7 +16,7 @@ $EndDescr
 Wire Wire Line
 	1900 1950 1950 1950
 $Comp
-L power:GND #PWR0101
+L op6-jig-rescue:GND-power #PWR0101
 U 1 1 610E7914
 P 4300 4150
 F 0 "#PWR0101" H 4300 3900 50  0001 C CNN
@@ -30,7 +30,7 @@ Wire Wire Line
 	1000 3450 1300 3450
 Connection ~ 1300 3450
 $Comp
-L power:GND #PWR0102
+L op6-jig-rescue:GND-power #PWR0102
 U 1 1 610F4A9C
 P 1300 3650
 F 0 "#PWR0102" H 1300 3400 50  0001 C CNN
@@ -54,7 +54,7 @@ F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 1450 25
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0104
+L op6-jig-rescue:GND-power #PWR0104
 U 1 1 611086C8
 P 4150 1550
 F 0 "#PWR0104" H 4150 1300 50  0001 C CNN
@@ -67,7 +67,7 @@ $EndComp
 Wire Wire Line
 	4300 3950 4300 4150
 $Comp
-L Connector_Generic:Conn_02x10_Counter_Clockwise J1
+L op6-jig-rescue:Conn_02x10_Counter_Clockwise-Connector_Generic J1
 U 1 1 6110B7D9
 P 9500 3850
 F 0 "J1" H 9550 4467 50  0000 C CNN
@@ -78,7 +78,7 @@ F 3 "~" H 9500 3850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0105
+L op6-jig-rescue:GND-power #PWR0105
 U 1 1 6110EF5D
 P 9150 4550
 F 0 "#PWR0105" H 9150 4300 50  0001 C CNN
@@ -88,10 +88,10 @@ F 3 "" H 9150 4550 50  0001 C CNN
 	1    9150 4550
 	1    0    0    -1  
 $EndComp
-Text GLabel 9950 3650 2    50   Input ~ 0
-PHONE_TX
+Text GLabel 9950 3450 2    50   Input ~ 0
+ATMEGA_RX
 $Comp
-L Connector:TestPoint_Probe H1
+L op6-jig-rescue:TestPoint_Probe-Connector H1
 U 1 1 6111E978
 P 4200 4750
 F 0 "H1" H 4300 4799 50  0000 L CNN
@@ -102,7 +102,7 @@ F 3 "~" H 4200 4750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:TestPoint_Probe H2
+L op6-jig-rescue:TestPoint_Probe-Connector H2
 U 1 1 6111FC56
 P 4200 5100
 F 0 "H2" H 4300 5149 50  0000 L CNN
@@ -113,7 +113,7 @@ F 3 "~" H 4200 5100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:TestPoint_Probe H3
+L op6-jig-rescue:TestPoint_Probe-Connector H3
 U 1 1 611215CE
 P 4200 5450
 F 0 "H3" H 4300 5499 50  0000 L CNN
@@ -149,37 +149,37 @@ PHONE_VBUS
 Wire Wire Line
 	1650 4800 1850 4800
 $Comp
-L Connector:TestPoint_Probe H4
+L op6-jig-rescue:TestPoint_Probe-Connector H4
 U 1 1 6112EEF7
 P 4200 5800
 F 0 "H4" H 4300 5849 50  0000 L CNN
-F 1 "PHONE_USB_DN" H 4300 5758 50  0000 L CNN
+F 1 "PHONE_USB_D-" H 4300 5758 50  0000 L CNN
 F 2 "op6-jig:TestPoint_Plated_Hole_D0.9mm" H 4200 5800 50  0001 C CNN
 F 3 "~" H 4200 5800 50  0001 C CNN
 	1    4200 5800
 	1    0    0    -1  
 $EndComp
 Text GLabel 3900 5900 0    50   BiDi ~ 0
-PHONE_USB_DN
+PHONE_USB_D-
 Wire Wire Line
 	3900 5900 4200 5900
 $Comp
-L Connector:TestPoint_Probe H5
+L op6-jig-rescue:TestPoint_Probe-Connector H5
 U 1 1 6112FAF1
 P 4200 6150
 F 0 "H5" H 4300 6199 50  0000 L CNN
-F 1 "PHONE_USB_DP" H 4300 6108 50  0000 L CNN
+F 1 "PHONE_USB_D+" H 4300 6108 50  0000 L CNN
 F 2 "op6-jig:TestPoint_Plated_Hole_D0.9mm" H 4200 6150 50  0001 C CNN
 F 3 "~" H 4200 6150 50  0001 C CNN
 	1    4200 6150
 	1    0    0    -1  
 $EndComp
 Text GLabel 3900 6250 0    50   BiDi ~ 0
-PHONE_USB_DP
+PHONE_USB_D+
 Wire Wire Line
 	3900 6250 4200 6250
 $Comp
-L Connector:TestPoint_Probe H6
+L op6-jig-rescue:TestPoint_Probe-Connector H6
 U 1 1 6113087A
 P 4200 6500
 F 0 "H6" H 4300 6549 50  0000 L CNN
@@ -194,7 +194,7 @@ PHONE_USB_CC
 Wire Wire Line
 	3900 6600 4200 6600
 $Comp
-L Connector:TestPoint_Probe H7
+L op6-jig-rescue:TestPoint_Probe-Connector H7
 U 1 1 61133DF6
 P 5750 4750
 F 0 "H7" H 5850 4799 50  0000 L CNN
@@ -209,7 +209,7 @@ VBAT
 Wire Wire Line
 	5450 4850 5750 4850
 $Comp
-L Connector:TestPoint_Probe H8
+L op6-jig-rescue:TestPoint_Probe-Connector H8
 U 1 1 6113561F
 P 5750 5100
 F 0 "H8" H 5850 5149 50  0000 L CNN
@@ -224,7 +224,7 @@ VOL_DOWN
 Wire Wire Line
 	5450 5200 5750 5200
 $Comp
-L Connector:TestPoint_Probe H9
+L op6-jig-rescue:TestPoint_Probe-Connector H9
 U 1 1 61136240
 P 5750 5450
 F 0 "H9" H 5850 5499 50  0000 L CNN
@@ -239,7 +239,7 @@ VOL_UP
 Wire Wire Line
 	5450 5550 5750 5550
 $Comp
-L Connector:TestPoint_Probe H10
+L op6-jig-rescue:TestPoint_Probe-Connector H10
 U 1 1 61136EAC
 P 5750 5800
 F 0 "H10" H 5850 5849 50  0000 L CNN
@@ -254,7 +254,7 @@ PWR_BTN
 Wire Wire Line
 	5450 5900 5750 5900
 $Comp
-L Connector:TestPoint_Probe H11
+L op6-jig-rescue:TestPoint_Probe-Connector H11
 U 1 1 61140ACB
 P 5750 6150
 F 0 "H11" H 5850 6199 50  0000 L CNN
@@ -269,7 +269,7 @@ BOOT_MODE_0
 Wire Wire Line
 	5450 6250 5750 6250
 $Comp
-L Connector:TestPoint_Probe H12
+L op6-jig-rescue:TestPoint_Probe-Connector H12
 U 1 1 61140AD3
 P 5750 6500
 F 0 "H12" H 5850 6549 50  0000 L CNN
@@ -285,8 +285,8 @@ Wire Wire Line
 	5450 6600 5750 6600
 Text GLabel 3900 4850 0    50   Input ~ 0
 PHONE_RX
-Text GLabel 9950 3550 2    50   Output ~ 0
-PHONE_RX
+Text GLabel 9950 3650 2    50   Output ~ 0
+ATMEGA_TX
 Text GLabel 9150 3650 0    50   Input ~ 0
 VBAT
 Wire Wire Line
@@ -295,12 +295,6 @@ Text GLabel 9950 3750 2    50   Output ~ 0
 PHONE_VBUS
 Wire Wire Line
 	9150 3750 9300 3750
-Text GLabel 9150 3850 0    50   BiDi ~ 0
-PHONE_USB_DN
-Text GLabel 9150 3950 0    50   BiDi ~ 0
-PHONE_USB_DP
-Text GLabel 9150 4050 0    50   BiDi ~ 0
-PHONE_USB_CC
 Text GLabel 9150 4150 0    50   Output ~ 0
 BOOT_MODE_0
 Text GLabel 9150 4250 0    50   Output ~ 0
@@ -315,7 +309,7 @@ Wire Wire Line
 	9150 4150 9300 4150
 Wire Wire Line
 	9150 4250 9300 4250
-Text GLabel 9950 3450 2    50   Input ~ 0
+Text GLabel 9950 3550 2    50   Input ~ 0
 GND
 Wire Wire Line
 	9950 3450 9800 3450
@@ -328,7 +322,7 @@ Wire Wire Line
 Wire Wire Line
 	9800 3650 9950 3650
 $Comp
-L power:GND #PWR0107
+L op6-jig-rescue:GND-power #PWR0107
 U 1 1 611623F4
 P 1050 6450
 F 0 "#PWR0107" H 1050 6200 50  0001 C CNN
@@ -343,14 +337,10 @@ Wire Wire Line
 Wire Wire Line
 	1050 6450 1050 6300
 Connection ~ 1050 6300
-Text GLabel 1850 5300 2    50   BiDi ~ 0
-PHONE_USB_DN
-Text GLabel 1850 5750 2    50   BiDi ~ 0
-PHONE_USB_DP
 Wire Wire Line
-	1850 5300 1650 5300
+	2350 5300 1650 5300
 Wire Wire Line
-	1650 5750 1850 5750
+	1650 5750 2350 5750
 Text GLabel 1850 5000 2    50   BiDi ~ 0
 PHONE_USB_CC
 Wire Wire Line
@@ -368,7 +358,7 @@ Wire Wire Line
 Wire Wire Line
 	4150 1550 4150 1500
 $Comp
-L Device:R R3
+L op6-jig-rescue:R-Device R3
 U 1 1 61108CDE
 P 4300 2050
 F 0 "R3" V 4093 2050 50  0000 C CNN
@@ -394,7 +384,7 @@ Wire Wire Line
 Wire Wire Line
 	4550 2250 4700 2250
 $Comp
-L Device:Crystal Y1
+L op6-jig-rescue:Crystal-Device Y1
 U 1 1 611185A8
 P 1100 800
 F 0 "Y1" H 1100 1068 50  0000 C CNN
@@ -413,7 +403,7 @@ Wire Wire Line
 Wire Wire Line
 	1250 800  1350 800 
 $Comp
-L Device:C_Small C1
+L op6-jig-rescue:C_Small-Device C1
 U 1 1 611023C6
 P 4150 1400
 F 0 "C1" H 4242 1446 50  0000 L CNN
@@ -429,7 +419,7 @@ Connection ~ 4150 1250
 Wire Wire Line
 	4150 1250 4350 1250
 $Comp
-L Device:R R4
+L op6-jig-rescue:R-Device R4
 U 1 1 61138ECF
 P 3750 1500
 F 0 "R4" H 3820 1546 50  0000 L CNN
@@ -440,7 +430,7 @@ F 3 "~" H 3750 1500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0103
+L op6-jig-rescue:GND-power #PWR0103
 U 1 1 6113CD6E
 P 3350 2650
 F 0 "#PWR0103" H 3350 2400 50  0001 C CNN
@@ -458,7 +448,7 @@ Connection ~ 3750 1250
 Wire Wire Line
 	3750 1250 4150 1250
 $Comp
-L Switch:SW_Push SW1
+L op6-jig-rescue:SW_Push-Switch SW1
 U 1 1 61148793
 P 3550 2400
 F 0 "SW1" H 3550 2685 50  0000 C CNN
@@ -478,7 +468,7 @@ Connection ~ 3750 2150
 Wire Wire Line
 	3750 2150 3750 2400
 $Comp
-L power:GND #PWR0108
+L op6-jig-rescue:GND-power #PWR0108
 U 1 1 61166E5A
 P 1100 1300
 F 0 "#PWR0108" H 1100 1050 50  0001 C CNN
@@ -489,7 +479,7 @@ F 3 "" H 1100 1300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C2
+L op6-jig-rescue:C_Small-Device C2
 U 1 1 6116844E
 P 850 1050
 F 0 "C2" H 942 1096 50  0000 L CNN
@@ -500,7 +490,7 @@ F 3 "~" H 850 1050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C3
+L op6-jig-rescue:C_Small-Device C3
 U 1 1 61169138
 P 1350 1050
 F 0 "C3" H 1442 1096 50  0000 L CNN
@@ -530,7 +520,7 @@ Wire Wire Line
 	850  1300 1100 1300
 Connection ~ 1100 1300
 $Comp
-L Connector:TestPoint_Probe H13
+L op6-jig-rescue:TestPoint_Probe-Connector H13
 U 1 1 6117A06F
 P 5750 6900
 F 0 "H13" H 5850 6949 50  0000 L CNN
@@ -551,7 +541,7 @@ Wire Wire Line
 Wire Wire Line
 	9150 4350 9150 4550
 $Comp
-L power:GND #PWR0109
+L op6-jig-rescue:GND-power #PWR0109
 U 1 1 611C6E21
 P 3850 2650
 F 0 "#PWR0109" H 3850 2400 50  0001 C CNN
@@ -564,7 +554,7 @@ $EndComp
 Wire Wire Line
 	3850 2650 3850 2600
 $Comp
-L Device:C_Small C4
+L op6-jig-rescue:C_Small-Device C4
 U 1 1 611C6E2C
 P 3850 2500
 F 0 "C4" H 3942 2546 50  0000 L CNN
@@ -579,7 +569,7 @@ Wire Wire Line
 Wire Wire Line
 	3850 2350 4700 2350
 $Comp
-L Device:R R6
+L op6-jig-rescue:R-Device R6
 U 1 1 611CE8FD
 P 3250 1850
 F 0 "R6" V 3043 1850 50  0000 C CNN
@@ -590,7 +580,7 @@ F 3 "~" H 3250 1850 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R5
+L op6-jig-rescue:R-Device R5
 U 1 1 611D33F2
 P 2800 1950
 F 0 "R5" V 2593 1950 50  0000 C CNN
@@ -619,7 +609,7 @@ Wire Wire Line
 Wire Wire Line
 	4700 1550 4600 1550
 $Comp
-L Connector_Generic:Conn_02x05_Odd_Even J2
+L op6-jig-rescue:Conn_02x05_Odd_Even-Connector_Generic J2
 U 1 1 61112DF9
 P 9500 1550
 F 0 "J2" H 9550 1967 50  0000 C CNN
@@ -662,7 +652,7 @@ Wire Wire Line
 Wire Wire Line
 	9300 1350 9150 1350
 $Comp
-L power:GND #PWR0110
+L op6-jig-rescue:GND-power #PWR0110
 U 1 1 61165A7A
 P 9900 2000
 F 0 "#PWR0110" H 9900 1750 50  0001 C CNN
@@ -700,7 +690,7 @@ Wire Wire Line
 	4350 650  4350 1250
 Connection ~ 4350 1250
 $Comp
-L Device:R R7
+L op6-jig-rescue:R-Device R7
 U 1 1 610F5265
 P 7450 1350
 F 0 "R7" H 7520 1396 50  0000 L CNN
@@ -711,7 +701,7 @@ F 3 "~" H 7450 1350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R8
+L op6-jig-rescue:R-Device R8
 U 1 1 610F6670
 P 7250 1750
 F 0 "R8" H 7320 1796 50  0000 L CNN
@@ -734,7 +724,7 @@ Wire Wire Line
 	7450 1200 7450 650 
 Connection ~ 7450 650 
 $Comp
-L power:GND #PWR0111
+L op6-jig-rescue:GND-power #PWR0111
 U 1 1 61154AD8
 P 7250 1950
 F 0 "#PWR0111" H 7250 1700 50  0001 C CNN
@@ -749,7 +739,7 @@ Wire Wire Line
 Wire Wire Line
 	4350 650  7150 650 
 $Comp
-L Device:R R9
+L op6-jig-rescue:R-Device R9
 U 1 1 611828D9
 P 6400 850
 F 0 "R9" V 6300 900 50  0000 C CNN
@@ -760,7 +750,7 @@ F 3 "~" H 6400 850 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R10
+L op6-jig-rescue:R-Device R10
 U 1 1 611939B3
 P 6400 1150
 F 0 "R10" V 6193 1150 50  0000 C CNN
@@ -771,7 +761,7 @@ F 3 "~" H 6400 1150 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R11
+L op6-jig-rescue:R-Device R11
 U 1 1 6119F544
 P 6400 1450
 F 0 "R11" V 6193 1450 50  0000 C CNN
@@ -794,7 +784,7 @@ Wire Wire Line
 Wire Wire Line
 	4350 1250 4700 1250
 $Comp
-L power:GND #PWR0112
+L op6-jig-rescue:GND-power #PWR0112
 U 1 1 612284CC
 P 3700 3300
 F 0 "#PWR0112" H 3700 3050 50  0001 C CNN
@@ -807,7 +797,7 @@ $EndComp
 Wire Wire Line
 	3700 3300 3700 3250
 $Comp
-L Device:C_Small C7
+L op6-jig-rescue:C_Small-Device C7
 U 1 1 612284D7
 P 3700 3150
 F 0 "C7" H 3792 3196 50  0000 L CNN
@@ -818,7 +808,7 @@ F 3 "~" H 3700 3150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0113
+L op6-jig-rescue:GND-power #PWR0113
 U 1 1 6123042F
 P 3450 3300
 F 0 "#PWR0113" H 3450 3050 50  0001 C CNN
@@ -831,7 +821,7 @@ $EndComp
 Wire Wire Line
 	3450 3300 3450 3250
 $Comp
-L Device:C_Small C6
+L op6-jig-rescue:C_Small-Device C6
 U 1 1 6123043A
 P 3450 3150
 F 0 "C6" H 3542 3196 50  0000 L CNN
@@ -842,7 +832,7 @@ F 3 "~" H 3450 3150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0114
+L op6-jig-rescue:GND-power #PWR0114
 U 1 1 612370C2
 P 3200 3300
 F 0 "#PWR0114" H 3200 3050 50  0001 C CNN
@@ -855,7 +845,7 @@ $EndComp
 Wire Wire Line
 	3200 3300 3200 3250
 $Comp
-L Device:C_Small C5
+L op6-jig-rescue:C_Small-Device C5
 U 1 1 612370CD
 P 3200 3150
 F 0 "C5" H 3292 3196 50  0000 L CNN
@@ -915,7 +905,7 @@ NoConn ~ 1900 2150
 NoConn ~ 1900 2250
 NoConn ~ 1650 5100
 $Comp
-L Device:LED D1
+L op6-jig-rescue:LED-Device D1
 U 1 1 612D6A7C
 P 6800 850
 F 0 "D1" H 6900 950 50  0000 C CNN
@@ -926,7 +916,7 @@ F 3 "~" H 6800 850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:LED D2
+L op6-jig-rescue:LED-Device D2
 U 1 1 612D8226
 P 6800 1150
 F 0 "D2" H 6900 1250 50  0000 C CNN
@@ -937,7 +927,7 @@ F 3 "~" H 6800 1150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:LED D3
+L op6-jig-rescue:LED-Device D3
 U 1 1 612E0F20
 P 6800 1500
 F 0 "D3" H 6900 1600 50  0000 C CNN
@@ -1045,7 +1035,7 @@ Wire Wire Line
 Wire Wire Line
 	8900 2450 9150 2450
 $Comp
-L power:GND #PWR0106
+L op6-jig-rescue:GND-power #PWR0106
 U 1 1 61129957
 P 9000 3100
 F 0 "#PWR0106" H 9000 2850 50  0001 C CNN
@@ -1118,7 +1108,7 @@ NoConn ~ 9150 3750
 Text GLabel 7250 5100 0    50   Input ~ 0
 PHONE_VBUS
 $Comp
-L Device:R R12
+L op6-jig-rescue:R-Device R12
 U 1 1 61458173
 P 7500 5250
 F 0 "R12" H 7570 5296 50  0000 L CNN
@@ -1143,7 +1133,7 @@ Wire Wire Line
 	7500 5650 7500 5400
 Connection ~ 7500 5400
 $Comp
-L Transistor_FET:FQP27P06 Q1
+L op6-jig-rescue:FQP27P06-Transistor_FET Q1
 U 1 1 6155BF6F
 P 7850 5400
 F 0 "Q1" H 8054 5446 50  0000 L CNN
@@ -1177,7 +1167,7 @@ Wire Wire Line
 Connection ~ 4700 1450
 Connection ~ 4700 1250
 $Comp
-L ATmega32U4:ATMEGA32U4 U1
+L op6-jig-rescue:ATMEGA32U4-ATmega32U4 U1
 U 1 1 610E346B
 P 5400 2350
 F 0 "U1" H 5400 3820 50  0000 C CNN
@@ -1188,7 +1178,7 @@ F 3 "" H 5100 3850 50  0001 L BNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x04 J3
+L op6-jig-rescue:Conn_01x04-Connector_Generic J3
 U 1 1 61652760
 P 6500 2300
 F 0 "J3" H 6580 2292 50  0000 L CNN
@@ -1198,12 +1188,6 @@ F 3 "~" H 6500 2300 50  0001 C CNN
 	1    6500 2300
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6100 2250 6150 2250
-Wire Wire Line
-	6150 2250 6150 2300
-Wire Wire Line
-	6150 2300 6300 2300
 Wire Wire Line
 	6100 2450 6150 2450
 Wire Wire Line
@@ -1217,12 +1201,6 @@ Wire Wire Line
 Wire Wire Line
 	6150 2500 6300 2500
 Wire Wire Line
-	6100 2150 6150 2150
-Wire Wire Line
-	6150 2150 6150 2200
-Wire Wire Line
-	6150 2200 6300 2200
-Wire Wire Line
 	1650 5650 1650 5750
 Connection ~ 1650 5750
 Wire Wire Line
@@ -1234,4 +1212,40 @@ Connection ~ 1900 2900
 Wire Wire Line
 	1900 2550 1900 2450
 Connection ~ 1900 2450
+Text Label 1700 5300 0    50   ~ 0
+PHONE_USB_D-
+Text Label 1700 5750 0    50   ~ 0
+PHONE_USB_D+
+Text GLabel 2350 5300 2    50   BiDi ~ 0
+PHONE_USB_D-
+Text GLabel 2350 5750 2    50   BiDi ~ 0
+PHONE_USB_D+
+Text Label 1900 2450 0    50   ~ 0
+ATMEGA_USB_D+
+Text Label 1900 2900 0    50   ~ 0
+ATMEGA_USB_D-
+Text Label 3500 1850 0    50   ~ 0
+ATMEGA_USB_R_D+
+Text Label 3450 1950 0    50   ~ 0
+ATMEGA_USB_R_D-
+Text Label 7150 2650 0    50   ~ 0
+ATMEGA_RX
+Text Label 7150 2750 0    50   ~ 0
+ATMEGA_TX
+Wire Wire Line
+	6100 2150 6200 2150
+Wire Wire Line
+	6200 2150 6200 2300
+Wire Wire Line
+	6200 2300 6300 2300
+Wire Wire Line
+	6100 2250 6300 2250
+Wire Wire Line
+	6300 2250 6300 2200
+Text Label 6100 850  1    50   ~ 0
+LED_R_EN
+Text Label 6200 1150 1    50   ~ 0
+LED_G_EN
+Text Label 6150 1450 1    50   ~ 0
+LEG_B_EN
 $EndSCHEMATC

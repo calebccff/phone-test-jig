@@ -1,97 +1,11 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# custom-symbols_USB_C_Plug_USB2.0_bidirectional
+# ATMEGA32U4-ATmega32U4
 #
-DEF custom-symbols_USB_C_Plug_USB2.0_bidirectional P 0 40 Y Y 1 F N
-F0 "P" -400 750 50 H V L CNN
-F1 "custom-symbols_USB_C_Plug_USB2.0_bidirectional" 500 750 50 H V R CNN
-F2 "" 150 0 50 H I C CNN
-F3 "" 150 0 50 H I C CNN
-$FPLIST
- USB*C*Plug*
-$ENDFPLIST
-DRAW
-A -275 -150 75 -1799 -1 0 1 20 N -350 -150 -200 -150
-A -275 -150 25 -1799 -1 0 1 10 N -300 -150 -250 -150
-A -275 -150 25 -1799 -1 0 1 10 F -300 -150 -250 -150
-A -275 150 25 1 1799 0 1 10 F -250 150 -300 150
-A -275 150 25 1 1799 0 1 10 N -250 150 -300 150
-A -275 150 75 1 1799 0 1 20 N -200 150 -350 150
-C -100 45 25 0 1 10 F
-C 0 -230 50 0 1 0 F
-S -10 -700 10 -660 0 0 0 N
-S 400 -340 360 -360 0 0 0 N
-S 400 -240 360 -260 0 0 0 N
-S 400 10 360 -10 0 0 0 N
-S 400 110 360 90 0 0 0 N
-S 400 310 360 290 0 0 0 N
-S 400 410 360 390 0 0 0 N
-S 400 610 360 590 0 0 0 N
-S -400 700 400 -700 0 1 10 f
-S -300 -150 -250 150 0 1 10 F
-S 75 70 125 120 0 1 10 F
-P 2 0 1 20 -350 -150 -350 150 N
-P 2 0 1 20 -200 150 -200 -150 N
-P 2 0 1 20 0 -230 0 170 N
-P 3 0 1 20 0 -130 -100 -30 -100 20 N
-P 3 0 1 20 0 -80 100 20 100 70 N
-P 4 0 1 10 -50 170 0 270 50 170 -50 170 F
-X GND A1 0 -900 200 U 50 50 1 1 P
-X GND A12 0 -900 200 U 50 50 1 1 P N
-X VBUS A4 600 600 200 L 50 50 1 1 P
-X CC A5 600 400 200 L 50 50 1 1 B
-X D+ A6 600 -250 200 L 50 50 1 1 B
-X D- A7 600 100 200 L 50 50 1 1 B
-X VBUS A9 600 600 200 L 50 50 1 1 P N
-X GND B1 0 -900 200 U 50 50 1 1 P N
-X GND B12 0 -900 200 U 50 50 1 1 P N
-X VBUS B4 600 600 200 L 50 50 1 1 P N
-X VCONN B5 600 300 200 L 50 50 1 1 B
-X D+ B6 600 -350 200 L 50 50 1 1 B
-X D- B7 600 0 200 L 50 50 1 1 B
-X VBUS B9 600 600 200 L 50 50 1 1 P N
-X SHIELD S1 -300 -900 200 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# eec_LSF0102YZTR
-#
-DEF eec_LSF0102YZTR U 0 40 Y Y 1 L N
-F0 "U" 0 200 50 H V L CNN
-F1 "eec_LSF0102YZTR" 0 300 50 H V L CNN
-F2 "Texas_Instruments-YZTR-XBGA-N8-0-0-*" 0 400 50 H I L CNN
-F3 "http://www.ti.com/lit/ds/symlink/lsf0102.pdf" 0 500 50 H I L CNN
-F4 "IC" 0 600 50 H I L CNN "category"
-F5 "IC LEVEL TRANSLATOR BIDIR 8BGA" 0 700 50 H I L CNN "digikey description"
-F6 "296-37552-1-ND" 0 800 50 H I L CNN "digikey part number"
-F7 "BGA8N50P2X4_188X88X62" 0 900 50 H I L CNN "ipc land pattern name"
-F8 "yes" 0 1000 50 H I L CNN "lead free"
-F9 "a2ab51e5eba0105a" 0 1100 50 H I L CNN "library id"
-F10 "Texas Instruments" 0 1200 50 H I L CNN "manufacturer"
-F11 "595-LSF0102YZTR" 0 1300 50 H I L CNN "mouser part number"
-F12 "DSBGA8" 0 1400 50 H I L CNN "package"
-F13 "yes" 0 1500 50 H I L CNN "rohs"
-F14 "+125°C" 0 1600 50 H I L CNN "temperature range high"
-F15 "-40°C" 0 1700 50 H I L CNN "temperature range low"
-DRAW
-S 200 100 1100 -700 1 1 0 f
-X GND 1 1200 -600 100 L 40 40 1 1 U
-X Vref_A 2 100 0 100 R 40 40 1 1 U
-X A1 3 100 -300 100 R 40 40 1 1 U
-X A2 4 100 -400 100 R 40 40 1 1 U
-X B2 5 1200 -100 100 L 40 40 1 1 U
-X B1 6 1200 0 100 L 40 40 1 1 U
-X Vref_B 7 100 -100 100 R 40 40 1 1 U
-X EN 8 100 -600 100 R 40 40 1 1 U
-ENDDRAW
-ENDDEF
-#
-# op6-jig-rescue_ATMEGA32U4-ATmega32U4
-#
-DEF op6-jig-rescue_ATMEGA32U4-ATmega32U4 U 0 40 Y Y 1 L N
+DEF ATMEGA32U4-ATmega32U4 U 0 40 Y Y 1 L N
 F0 "U" -228 1357 50 H V L BNN
-F1 "op6-jig-rescue_ATMEGA32U4-ATmega32U4" -293 -1717 50 H V L BNN
+F1 "ATMEGA32U4-ATmega32U4" -293 -1717 50 H V L BNN
 F2 "" -50 1300 50 H I L BNN
 F3 "" -300 1500 50 H I L BNN
 DRAW
@@ -146,11 +60,11 @@ X PB1 9 700 1000 200 L 40 40 0 0 B
 ENDDRAW
 ENDDEF
 #
-# op6-jig-rescue_C_Small-Device
+# C_Small-Device
 #
-DEF op6-jig-rescue_C_Small-Device C 0 10 N N 1 F N
+DEF C_Small-Device C 0 10 N N 1 F N
 F0 "C" 10 70 50 H V L CNN
-F1 "op6-jig-rescue_C_Small-Device" 10 -80 50 H V L CNN
+F1 "C_Small-Device" 10 -80 50 H V L CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -164,11 +78,11 @@ X ~ 2 0 -100 80 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# op6-jig-rescue_Conn_01x04-Connector_Generic
+# Conn_01x04-Connector_Generic
 #
-DEF op6-jig-rescue_Conn_01x04-Connector_Generic J 0 40 Y N 1 F N
+DEF Conn_01x04-Connector_Generic J 0 40 Y N 1 F N
 F0 "J" 0 200 50 H V C CNN
-F1 "op6-jig-rescue_Conn_01x04-Connector_Generic" 0 -300 50 H V C CNN
+F1 "Conn_01x04-Connector_Generic" 0 -300 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -187,11 +101,11 @@ X Pin_4 4 -200 -200 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# op6-jig-rescue_Conn_02x05_Odd_Even-Connector_Generic
+# Conn_02x05_Odd_Even-Connector_Generic
 #
-DEF op6-jig-rescue_Conn_02x05_Odd_Even-Connector_Generic J 0 40 Y N 1 F N
+DEF Conn_02x05_Odd_Even-Connector_Generic J 0 40 Y N 1 F N
 F0 "J" 50 300 50 H V C CNN
-F1 "op6-jig-rescue_Conn_02x05_Odd_Even-Connector_Generic" 50 -300 50 H V C CNN
+F1 "Conn_02x05_Odd_Even-Connector_Generic" 50 -300 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -222,11 +136,11 @@ X Pin_9 9 -200 -200 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# op6-jig-rescue_Conn_02x10_Counter_Clockwise-Connector_Generic
+# Conn_02x10_Counter_Clockwise-Connector_Generic
 #
-DEF op6-jig-rescue_Conn_02x10_Counter_Clockwise-Connector_Generic J 0 40 Y N 1 F N
+DEF Conn_02x10_Counter_Clockwise-Connector_Generic J 0 40 Y N 1 F N
 F0 "J" 50 500 50 H V C CNN
-F1 "op6-jig-rescue_Conn_02x10_Counter_Clockwise-Connector_Generic" 50 -600 50 H V C CNN
+F1 "Conn_02x10_Counter_Clockwise-Connector_Generic" 50 -600 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -277,11 +191,11 @@ X Pin_9 9 -200 -400 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# op6-jig-rescue_Crystal-Device
+# Crystal-Device
 #
-DEF op6-jig-rescue_Crystal-Device Y 0 40 N N 1 F N
+DEF Crystal-Device Y 0 40 N N 1 F N
 F0 "Y" 0 150 50 H V C CNN
-F1 "op6-jig-rescue_Crystal-Device" 0 -150 50 H V C CNN
+F1 "Crystal-Device" 0 -150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -298,11 +212,11 @@ X 2 2 150 0 50 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# op6-jig-rescue_FQP27P06-Transistor_FET
+# FQP27P06-Transistor_FET
 #
-DEF op6-jig-rescue_FQP27P06-Transistor_FET Q 0 20 Y N 1 F N
+DEF FQP27P06-Transistor_FET Q 0 20 Y N 1 F N
 F0 "Q" 200 75 50 H V L CNN
-F1 "op6-jig-rescue_FQP27P06-Transistor_FET" 200 0 50 H V L CNN
+F1 "FQP27P06-Transistor_FET" 200 0 50 H V L CNN
 F2 "Package_TO_SOT_THT:TO-220-3_Vertical" 200 -75 50 H I L CIN
 F3 "" 0 0 50 H I L CNN
 $FPLIST
@@ -329,11 +243,11 @@ X S 3 100 -200 100 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# op6-jig-rescue_GND-power
+# GND-power
 #
-DEF op6-jig-rescue_GND-power #PWR 0 0 Y Y 1 F P
+DEF GND-power #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -250 50 H I C CNN
-F1 "op6-jig-rescue_GND-power" 0 -150 50 H V C CNN
+F1 "GND-power" 0 -150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -342,11 +256,11 @@ X GND 1 0 0 0 D 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# op6-jig-rescue_LED-Device
+# LED-Device
 #
-DEF op6-jig-rescue_LED-Device D 0 40 N N 1 F N
+DEF LED-Device D 0 40 N N 1 F N
 F0 "D" 0 100 50 H V C CNN
-F1 "op6-jig-rescue_LED-Device" 0 -100 50 H V C CNN
+F1 "LED-Device" 0 -100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -365,11 +279,11 @@ X A 2 150 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# op6-jig-rescue_R-Device
+# R-Device
 #
-DEF op6-jig-rescue_R-Device R 0 0 N Y 1 F N
+DEF R-Device R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "op6-jig-rescue_R-Device" 0 0 50 V V C CNN
+F1 "R-Device" 0 0 50 V V C CNN
 F2 "" -70 0 50 V I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -382,11 +296,11 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# op6-jig-rescue_SW_Push-Switch
+# SW_Push-Switch
 #
-DEF op6-jig-rescue_SW_Push-Switch SW 0 40 N N 1 F N
+DEF SW_Push-Switch SW 0 40 N N 1 F N
 F0 "SW" 50 100 50 H V L CNN
-F1 "op6-jig-rescue_SW_Push-Switch" 0 -60 50 H V C CNN
+F1 "SW_Push-Switch" 0 -60 50 H V C CNN
 F2 "" 0 200 50 H I C CNN
 F3 "" 0 200 50 H I C CNN
 DRAW
@@ -399,11 +313,11 @@ X 2 2 200 0 100 L 50 50 0 1 P
 ENDDRAW
 ENDDEF
 #
-# op6-jig-rescue_TestPoint_Probe-Connector
+# TestPoint_Probe-Connector
 #
-DEF op6-jig-rescue_TestPoint_Probe-Connector TP 0 30 N N 1 F N
+DEF TestPoint_Probe-Connector TP 0 30 N N 1 F N
 F0 "TP" 65 230 50 H V C CNN
-F1 "op6-jig-rescue_TestPoint_Probe-Connector" 65 160 50 H V C CNN
+F1 "TestPoint_Probe-Connector" 65 160 50 H V C CNN
 F2 "" 200 0 50 H I C CNN
 F3 "" 200 0 50 H I C CNN
 $FPLIST

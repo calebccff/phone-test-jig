@@ -1,4 +1,4 @@
-update=Thu 23 Sep 2021 01:56:55 BST
+update=Mon 27 Sep 2021 03:10:44 BST
 version=1
 last_client=kicad
 [general]
@@ -239,7 +239,7 @@ Enabled=0
 [pcbnew/Netclasses]
 [pcbnew/Netclasses/Default]
 Name=Default
-Clearance=0.15
+Clearance=0.127
 TrackWidth=0.127
 ViaDiameter=0.8
 ViaDrill=0.4
@@ -262,7 +262,7 @@ dPairViaGap=0.25
 [pcbnew/Netclasses/2]
 Name=VBAT
 Clearance=0.15
-TrackWidth=0.2
+TrackWidth=0.6
 ViaDiameter=0.8
 ViaDrill=0.4
 uViaDiameter=0.3

@@ -13,8 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Wire Wire Line
-	1900 1950 1950 1950
 $Comp
 L op6-jig-rescue:GND-power #PWR0101
 U 1 1 610E7914
@@ -26,33 +24,19 @@ F 3 "" H 4300 4150 50  0001 C CNN
 	1    4300 4150
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1000 3450 1300 3450
-Connection ~ 1300 3450
 $Comp
 L op6-jig-rescue:GND-power #PWR0102
 U 1 1 610F4A9C
-P 1300 3650
-F 0 "#PWR0102" H 1300 3400 50  0001 C CNN
-F 1 "GND" H 1305 3477 50  0000 C CNN
-F 2 "" H 1300 3650 50  0001 C CNN
-F 3 "" H 1300 3650 50  0001 C CNN
-	1    1300 3650
+P 1325 3525
+F 0 "#PWR0102" H 1325 3275 50  0001 C CNN
+F 1 "GND" H 1330 3352 50  0000 C CNN
+F 2 "" H 1325 3525 50  0001 C CNN
+F 3 "" H 1325 3525 50  0001 C CNN
+	1    1325 3525
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1300 3450 1300 3650
-$Comp
-L custom-symbols:USB_C_Plug_USB2.0_bidirectional P1
-U 1 1 610C5EE8
-P 1300 2550
-F 0 "P1" H 1407 3417 50  0000 C CNN
-F 1 "USB_C_ATMEGA" H 1407 3326 50  0000 C CNN
-F 2 "Connector_USB:USB_C_Receptacle_GCT_USB4085" H 1450 2550 50  0001 C CNN
-F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 1450 2550 50  0001 C CNN
-	1    1300 2550
-	1    0    0    -1  
-$EndComp
+	1325 3325 1325 3525
 $Comp
 L op6-jig-rescue:GND-power #PWR0104
 U 1 1 611086C8
@@ -133,21 +117,8 @@ Text GLabel 3900 5550 0    50   Input ~ 0
 PHONE_VBUS_SWITCHED
 Wire Wire Line
 	3900 5550 4200 5550
-$Comp
-L custom-symbols:USB_C_Plug_USB2.0_bidirectional P2
-U 1 1 61128AAD
-P 1050 5400
-F 0 "P2" H 1157 6267 50  0000 C CNN
-F 1 "USB_C_PHONE" H 1157 6176 50  0000 C CNN
-F 2 "Connector_USB:USB_C_Receptacle_GCT_USB4085" H 1200 5400 50  0001 C CNN
-F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 1200 5400 50  0001 C CNN
-	1    1050 5400
-	1    0    0    -1  
-$EndComp
-Text GLabel 1850 4800 2    50   Output ~ 0
+Text GLabel 1925 4175 2    50   Output ~ 0
 PHONE_VBUS
-Wire Wire Line
-	1650 4800 1850 4800
 $Comp
 L op6-jig-rescue:TestPoint_Probe-Connector H4
 U 1 1 6112EEF7
@@ -324,37 +295,28 @@ Wire Wire Line
 $Comp
 L op6-jig-rescue:GND-power #PWR0107
 U 1 1 611623F4
-P 1050 6450
-F 0 "#PWR0107" H 1050 6200 50  0001 C CNN
-F 1 "GND" H 1055 6277 50  0000 C CNN
-F 2 "" H 1050 6450 50  0001 C CNN
-F 3 "" H 1050 6450 50  0001 C CNN
-	1    1050 6450
+P 1325 5725
+F 0 "#PWR0107" H 1325 5475 50  0001 C CNN
+F 1 "GND" H 1330 5552 50  0000 C CNN
+F 2 "" H 1325 5725 50  0001 C CNN
+F 3 "" H 1325 5725 50  0001 C CNN
+	1    1325 5725
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	750  6300 1050 6300
+	1325 5725 1325 5575
 Wire Wire Line
-	1050 6450 1050 6300
-Connection ~ 1050 6300
+	2525 4700 1825 4700
 Wire Wire Line
-	2350 5300 1650 5300
-Wire Wire Line
-	1650 5750 2350 5750
-Text GLabel 1850 5000 2    50   BiDi ~ 0
+	1825 4450 2525 4450
+Text GLabel 2025 5200 2    50   BiDi ~ 0
 PHONE_USB_CC
 Wire Wire Line
-	1650 5000 1850 5000
+	1825 5200 2025 5200
 Wire Wire Line
 	4300 3950 4700 3950
 Wire Wire Line
-	1950 1250 1950 1950
-Wire Wire Line
-	1900 2450 2200 2450
-Wire Wire Line
-	1900 2900 2300 2900
-Wire Wire Line
-	2300 2900 2300 1950
+	1950 1250 1950 1925
 Wire Wire Line
 	4150 1550 4150 1500
 $Comp
@@ -365,6 +327,7 @@ F 0 "R3" V 4093 2050 50  0000 C CNN
 F 1 "3.3k" V 4184 2050 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 4230 2050 50  0001 C CNN
 F 3 "~" H 4300 2050 50  0001 C CNN
+F 4 "C26010" H 4300 2050 50  0001 C CNN "LCSC"
 	1    4300 2050
 	0    1    1    0   
 $EndComp
@@ -372,9 +335,6 @@ Wire Wire Line
 	4450 2050 4700 2050
 Wire Wire Line
 	4150 2050 1950 2050
-Wire Wire Line
-	1950 2050 1950 1950
-Connection ~ 1950 1950
 Text GLabel 4550 2250 0    50   Input ~ 0
 OSC1
 Text GLabel 6250 3650 2    50   Output ~ 0
@@ -410,6 +370,7 @@ F 0 "C1" H 4242 1446 50  0000 L CNN
 F 1 "1uF" H 4242 1355 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 4150 1400 50  0001 C CNN
 F 3 "~" H 4150 1400 50  0001 C CNN
+F 4 "C28323" H 4150 1400 50  0001 C CNN "LCSC"
 	1    4150 1400
 	1    0    0    -1  
 $EndComp
@@ -426,6 +387,7 @@ F 0 "R4" H 3820 1546 50  0000 L CNN
 F 1 "10k" H 3820 1455 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 3680 1500 50  0001 C CNN
 F 3 "~" H 3750 1500 50  0001 C CNN
+F 4 "C22859" H 3750 1500 50  0001 C CNN "LCSC"
 	1    3750 1500
 	1    0    0    -1  
 $EndComp
@@ -486,6 +448,7 @@ F 0 "C2" H 942 1096 50  0000 L CNN
 F 1 "22pF" H 942 1005 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 850 1050 50  0001 C CNN
 F 3 "~" H 850 1050 50  0001 C CNN
+F 4 "C1804" H 850 1050 50  0001 C CNN "LCSC"
 	1    850  1050
 	1    0    0    -1  
 $EndComp
@@ -497,6 +460,7 @@ F 0 "C3" H 1442 1096 50  0000 L CNN
 F 1 "22pF" H 1442 1005 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 1350 1050 50  0001 C CNN
 F 3 "~" H 1350 1050 50  0001 C CNN
+F 4 "C1804" H 1350 1050 50  0001 C CNN "LCSC"
 	1    1350 1050
 	1    0    0    -1  
 $EndComp
@@ -561,6 +525,7 @@ F 0 "C4" H 3942 2546 50  0000 L CNN
 F 1 "1uF" H 3942 2455 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 3850 2500 50  0001 C CNN
 F 3 "~" H 3850 2500 50  0001 C CNN
+F 4 "C28323" H 3850 2500 50  0001 C CNN "LCSC"
 	1    3850 2500
 	1    0    0    -1  
 $EndComp
@@ -576,6 +541,7 @@ F 0 "R6" V 3043 1850 50  0000 C CNN
 F 1 "22" V 3134 1850 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 3180 1850 50  0001 C CNN
 F 3 "~" H 3250 1850 50  0001 C CNN
+F 4 "C17561" H 3250 1850 50  0001 C CNN "LCSC"
 	1    3250 1850
 	0    1    1    0   
 $EndComp
@@ -587,6 +553,7 @@ F 0 "R5" V 2593 1950 50  0000 C CNN
 F 1 "22" V 2684 1950 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2730 1950 50  0001 C CNN
 F 3 "~" H 2800 1950 50  0001 C CNN
+F 4 "C17561" H 2800 1950 50  0001 C CNN "LCSC"
 	1    2800 1950
 	0    1    1    0   
 $EndComp
@@ -594,8 +561,6 @@ Wire Wire Line
 	2300 1950 2650 1950
 Wire Wire Line
 	2950 1950 4700 1950
-Wire Wire Line
-	2200 2450 2200 1850
 Wire Wire Line
 	2200 1850 3100 1850
 Wire Wire Line
@@ -697,18 +662,8 @@ F 0 "R7" H 7520 1396 50  0000 L CNN
 F 1 "10k" H 7520 1305 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 7380 1350 50  0001 C CNN
 F 3 "~" H 7450 1350 50  0001 C CNN
+F 4 "C22859" H 7450 1350 50  0001 C CNN "LCSC"
 	1    7450 1350
-	1    0    0    -1  
-$EndComp
-$Comp
-L op6-jig-rescue:R-Device R8
-U 1 1 610F6670
-P 7250 1750
-F 0 "R8" H 7320 1796 50  0000 L CNN
-F 1 "5k" H 7320 1705 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 7180 1750 50  0001 C CNN
-F 3 "~" H 7250 1750 50  0001 C CNN
-	1    7250 1750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -746,6 +701,7 @@ F 0 "R9" V 6300 900 50  0000 C CNN
 F 1 "220" V 6300 750 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 6330 850 50  0001 C CNN
 F 3 "~" H 6400 850 50  0001 C CNN
+F 4 "C17557" H 6400 850 50  0001 C CNN "LCSC"
 	1    6400 850 
 	0    1    1    0   
 $EndComp
@@ -757,6 +713,7 @@ F 0 "R10" V 6193 1150 50  0000 C CNN
 F 1 "220" V 6284 1150 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 6330 1150 50  0001 C CNN
 F 3 "~" H 6400 1150 50  0001 C CNN
+F 4 "C17557" H 6400 1150 50  0001 C CNN "LCSC"
 	1    6400 1150
 	0    1    1    0   
 $EndComp
@@ -768,6 +725,7 @@ F 0 "R11" V 6193 1450 50  0000 C CNN
 F 1 "220" V 6284 1450 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 6330 1450 50  0001 C CNN
 F 3 "~" H 6400 1450 50  0001 C CNN
+F 4 "C17557" H 6400 1450 50  0001 C CNN "LCSC"
 	1    6400 1450
 	0    1    1    0   
 $EndComp
@@ -801,9 +759,10 @@ L op6-jig-rescue:C_Small-Device C7
 U 1 1 612284D7
 P 3700 3150
 F 0 "C7" H 3792 3196 50  0000 L CNN
-F 1 "0.1uF" H 3792 3105 50  0000 L CNN
+F 1 "100nF" H 3792 3105 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 3700 3150 50  0001 C CNN
 F 3 "~" H 3700 3150 50  0001 C CNN
+F 4 "C49678" H 3700 3150 50  0001 C CNN "LCSC"
 	1    3700 3150
 	1    0    0    -1  
 $EndComp
@@ -825,9 +784,10 @@ L op6-jig-rescue:C_Small-Device C6
 U 1 1 6123043A
 P 3450 3150
 F 0 "C6" H 3542 3196 50  0000 L CNN
-F 1 "0.1uF" H 3542 3105 50  0000 L CNN
+F 1 "100nF" H 3542 3105 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 3450 3150 50  0001 C CNN
 F 3 "~" H 3450 3150 50  0001 C CNN
+F 4 "C49678" H 3450 3150 50  0001 C CNN "LCSC"
 	1    3450 3150
 	1    0    0    -1  
 $EndComp
@@ -849,9 +809,10 @@ L op6-jig-rescue:C_Small-Device C5
 U 1 1 612370CD
 P 3200 3150
 F 0 "C5" H 3292 3196 50  0000 L CNN
-F 1 "0.1uF" H 3292 3105 50  0000 L CNN
+F 1 "100nF" H 3292 3105 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 3200 3150 50  0001 C CNN
 F 3 "~" H 3200 3150 50  0001 C CNN
+F 4 "C49678" H 3200 3150 50  0001 C CNN "LCSC"
 	1    3200 3150
 	1    0    0    -1  
 $EndComp
@@ -896,14 +857,12 @@ Wire Wire Line
 	9800 4050 9950 4050
 NoConn ~ 9300 1650
 NoConn ~ 9800 1650
-NoConn ~ 6100 3050
 NoConn ~ 6100 3150
 NoConn ~ 4700 2750
 NoConn ~ 4700 2650
 NoConn ~ 9800 4250
-NoConn ~ 1900 2150
-NoConn ~ 1900 2250
-NoConn ~ 1650 5100
+NoConn ~ 1825 2700
+NoConn ~ 1825 2800
 $Comp
 L op6-jig-rescue:LED-Device D1
 U 1 1 612D6A7C
@@ -912,6 +871,7 @@ F 0 "D1" H 6900 950 50  0000 C CNN
 F 1 "LED_R" H 6700 950 50  0000 C CNN
 F 2 "LED_SMD:LED_1206_3216Metric" H 6800 850 50  0001 C CNN
 F 3 "~" H 6800 850 50  0001 C CNN
+F 4 "C84256" H 6800 850 50  0001 C CNN "LCSC"
 	1    6800 850 
 	1    0    0    -1  
 $EndComp
@@ -923,6 +883,7 @@ F 0 "D2" H 6900 1250 50  0000 C CNN
 F 1 "LED_G" H 6700 1250 50  0000 C CNN
 F 2 "LED_SMD:LED_1206_3216Metric" H 6800 1150 50  0001 C CNN
 F 3 "~" H 6800 1150 50  0001 C CNN
+F 4 "C2297" H 6800 1150 50  0001 C CNN "LCSC"
 	1    6800 1150
 	1    0    0    -1  
 $EndComp
@@ -934,6 +895,7 @@ F 0 "D3" H 6900 1600 50  0000 C CNN
 F 1 "LED_B" H 6700 1600 50  0000 C CNN
 F 2 "LED_SMD:LED_1206_3216Metric" H 6800 1500 50  0001 C CNN
 F 3 "~" H 6800 1500 50  0001 C CNN
+F 4 "C2297" H 6800 1500 50  0001 C CNN "LCSC"
 	1    6800 1500
 	1    0    0    -1  
 $EndComp
@@ -988,7 +950,7 @@ Wire Wire Line
 	6100 850  6250 850 
 Wire Wire Line
 	6100 850  6100 1250
-Text GLabel 8050 5600 2    50   Output ~ 0
+Text GLabel 8625 5400 2    50   Output ~ 0
 PHONE_VBUS_SWITCHED
 Text GLabel 6150 2850 2    50   Input ~ 0
 VBAT
@@ -1023,6 +985,7 @@ F 13 "yes" H 7700 3850 50  0001 L CNN "rohs"
 F 14 "+125°C" H 7700 3950 50  0001 L CNN "temperature range high"
 F 15 "-40°C" H 7700 4050 50  0001 L CNN "temperature range low"
 F 16 "" H 7700 4150 50  0001 L CNN "voltage"
+F 17 "C132024" H 7700 2350 50  0001 C CNN "LCSC"
 	1    7700 2350
 	1    0    0    -1  
 $EndComp
@@ -1069,10 +1032,8 @@ Wire Wire Line
 Connection ~ 7800 650 
 Wire Wire Line
 	7800 650  10050 650 
-Text GLabel 7250 5650 0    50   Input ~ 0
+Text GLabel 7500 5725 0    50   Input ~ 0
 VBUS_EN
-Wire Wire Line
-	7500 5400 7650 5400
 Text GLabel 6150 1550 2    50   Output ~ 0
 VOL_DOWN
 Wire Wire Line
@@ -1104,45 +1065,14 @@ Wire Wire Line
 NoConn ~ 9800 3850
 Wire Wire Line
 	9800 3750 9950 3750
-NoConn ~ 9150 3750
-Text GLabel 7250 5100 0    50   Input ~ 0
+Text GLabel 7500 5200 0    50   Input ~ 0
 PHONE_VBUS
-$Comp
-L op6-jig-rescue:R-Device R12
-U 1 1 61458173
-P 7500 5250
-F 0 "R12" H 7570 5296 50  0000 L CNN
-F 1 "10k" H 7570 5205 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 7430 5250 50  0001 C CNN
-F 3 "~" H 7500 5250 50  0001 C CNN
-	1    7500 5250
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	7950 5600 8050 5600
+	8525 5400 8625 5400
 Wire Wire Line
-	7250 5100 7500 5100
+	7500 5200 7725 5200
 Wire Wire Line
-	7500 5100 7950 5100
-Wire Wire Line
-	7950 5100 7950 5200
-Connection ~ 7500 5100
-Wire Wire Line
-	7250 5650 7500 5650
-Wire Wire Line
-	7500 5650 7500 5400
-Connection ~ 7500 5400
-$Comp
-L op6-jig-rescue:FQP27P06-Transistor_FET Q1
-U 1 1 6155BF6F
-P 7850 5400
-F 0 "Q1" H 8054 5446 50  0000 L CNN
-F 1 "FQP27P06" H 8054 5355 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 8050 5325 50  0001 L CIN
-F 3 "https://www.onsemi.com/pub/Collateral/FQP27P06-D.PDF" H 7850 5400 50  0001 L CNN
-	1    7850 5400
-	1    0    0    -1  
-$EndComp
+	7500 5725 7725 5725
 Wire Wire Line
 	4700 3950 4700 3750
 Connection ~ 4700 3750
@@ -1177,52 +1107,17 @@ F 3 "" H 5100 3850 50  0001 L BNN
 	1    5400 2350
 	1    0    0    -1  
 $EndComp
-$Comp
-L op6-jig-rescue:Conn_01x04-Connector_Generic J3
-U 1 1 61652760
-P 6500 2300
-F 0 "J3" H 6580 2292 50  0000 L CNN
-F 1 "ATMEGA_MISC_GPIO" H 6580 2201 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 6500 2300 50  0001 C CNN
-F 3 "~" H 6500 2300 50  0001 C CNN
-	1    6500 2300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6100 2450 6150 2450
-Wire Wire Line
-	6150 2450 6150 2400
-Wire Wire Line
-	6150 2400 6300 2400
-Wire Wire Line
-	6100 2550 6150 2550
-Wire Wire Line
-	6150 2550 6150 2500
-Wire Wire Line
-	6150 2500 6300 2500
-Wire Wire Line
-	1650 5650 1650 5750
-Connection ~ 1650 5750
-Wire Wire Line
-	1650 5400 1650 5300
-Connection ~ 1650 5300
-Wire Wire Line
-	1900 2900 1900 2800
-Connection ~ 1900 2900
-Wire Wire Line
-	1900 2550 1900 2450
-Connection ~ 1900 2450
-Text Label 1700 5300 0    50   ~ 0
+Text Label 1875 4700 0    50   ~ 0
 PHONE_USB_D-
-Text Label 1700 5750 0    50   ~ 0
+Text Label 1875 4450 0    50   ~ 0
 PHONE_USB_D+
-Text GLabel 2350 5300 2    50   BiDi ~ 0
+Text GLabel 2525 4700 2    50   BiDi ~ 0
 PHONE_USB_D-
-Text GLabel 2350 5750 2    50   BiDi ~ 0
+Text GLabel 2525 4450 2    50   BiDi ~ 0
 PHONE_USB_D+
-Text Label 1900 2450 0    50   ~ 0
+Text Label 2200 2200 0    50   ~ 0
 ATMEGA_USB_D+
-Text Label 1900 2900 0    50   ~ 0
+Text Label 1900 2450 0    50   ~ 0
 ATMEGA_USB_D-
 Text Label 3500 1850 0    50   ~ 0
 ATMEGA_USB_R_D+
@@ -1232,20 +1127,222 @@ Text Label 7150 2650 0    50   ~ 0
 ATMEGA_RX
 Text Label 7150 2750 0    50   ~ 0
 ATMEGA_TX
-Wire Wire Line
-	6100 2150 6200 2150
-Wire Wire Line
-	6200 2150 6200 2300
-Wire Wire Line
-	6200 2300 6300 2300
-Wire Wire Line
-	6100 2250 6300 2250
-Wire Wire Line
-	6300 2250 6300 2200
 Text Label 6100 850  1    50   ~ 0
 LED_R_EN
 Text Label 6200 1150 1    50   ~ 0
 LED_G_EN
 Text Label 6150 1450 1    50   ~ 0
 LEG_B_EN
+$Comp
+L kicad-open-libs:AP2192-on-grid U3
+U 1 1 61568FB7
+P 8125 5500
+F 0 "U3" H 8125 6067 50  0000 C CNN
+F 1 "AP2192" H 8125 5976 50  0000 C CNN
+F 2 "Package_SO:SO-8_3.9x4.9mm_P1.27mm" H 8125 5500 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/mic2026.pdf" H 8125 5500 50  0001 C CNN
+F 4 "C155322" H 8125 5500 50  0001 C CNN "LCSC"
+	1    8125 5500
+	1    0    0    -1  
+$EndComp
+NoConn ~ 7725 5825
+NoConn ~ 7725 5525
+NoConn ~ 8525 5600
+Text GLabel 7525 5425 0    50   Output ~ 0
+AP_VBUS_FAULT1
+Wire Wire Line
+	7525 5425 7725 5425
+Text GLabel 6150 3050 2    50   Input ~ 0
+AP_VBUS_FAULT1
+Wire Wire Line
+	6100 3050 6150 3050
+Text Notes 6600 5375 0    50   ~ 0
+Pull up
+$Comp
+L op6-jig-rescue:GND-power #PWR0115
+U 1 1 61635912
+P 8125 6075
+F 0 "#PWR0115" H 8125 5825 50  0001 C CNN
+F 1 "GND" H 8130 5902 50  0000 C CNN
+F 2 "" H 8125 6075 50  0001 C CNN
+F 3 "" H 8125 6075 50  0001 C CNN
+	1    8125 6075
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8125 6000 8125 6075
+$Comp
+L HRO_TYPE-C:TYPE-C-31-M-12 J4
+U 1 1 6169A2C3
+P 1125 2625
+F 0 "J4" H 1125 3506 50  0000 C CNN
+F 1 "TYPE-C-31-M-12" H 1125 3415 50  0000 C CNN
+F 2 "Local:HRO_TYPE-C-31-M-12" H 1525 1825 50  0001 L BNN
+F 3 "" H 1100 3400 50  0001 L BNN
+F 4 "C17414" H 1125 2625 50  0001 C CNN "LCSC"
+	1    1125 2625
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 1850 2200 2200
+Wire Wire Line
+	1825 2200 2200 2200
+Wire Wire Line
+	1825 2300 1825 2200
+Connection ~ 1825 2200
+Wire Wire Line
+	2300 2450 2300 1950
+Wire Wire Line
+	1825 2450 2300 2450
+Wire Wire Line
+	1825 2550 1825 2450
+Connection ~ 1825 2450
+Wire Wire Line
+	700  3325 800  3325
+Wire Wire Line
+	900  3325 800  3325
+Connection ~ 800  3325
+Wire Wire Line
+	1000 3325 900  3325
+Connection ~ 900  3325
+Wire Wire Line
+	1225 3325 1000 3325
+Connection ~ 1000 3325
+Wire Wire Line
+	1225 3325 1325 3325
+Connection ~ 1225 3325
+Connection ~ 1325 3325
+Wire Wire Line
+	1225 1925 1325 1925
+Wire Wire Line
+	1325 1925 1950 1925
+Connection ~ 1325 1925
+Connection ~ 1950 1925
+Wire Wire Line
+	1950 1925 1950 2050
+Connection ~ 1825 4700
+Connection ~ 1825 4450
+Connection ~ 1325 4175
+Wire Wire Line
+	1325 4175 1925 4175
+Wire Wire Line
+	1225 4175 1325 4175
+Wire Wire Line
+	1825 4800 1825 4700
+Wire Wire Line
+	1825 4550 1825 4450
+$Comp
+L HRO_TYPE-C:TYPE-C-31-M-12 J5
+U 1 1 617A33F6
+P 1125 4875
+F 0 "J5" H 1125 5756 50  0000 C CNN
+F 1 "TYPE-C-31-M-12" H 1125 5665 50  0000 C CNN
+F 2 "Local:HRO_TYPE-C-31-M-12" H 1525 4075 50  0001 L BNN
+F 3 "" H 1100 5650 50  0001 L BNN
+F 4 "C17414" H 1125 4875 50  0001 C CNN "LCSC"
+	1    1125 4875
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1825 5200 1825 5300
+Connection ~ 1825 5200
+Connection ~ 1225 5575
+Wire Wire Line
+	1225 5575 1325 5575
+Connection ~ 1325 5575
+Wire Wire Line
+	1000 5575 1225 5575
+Wire Wire Line
+	1000 5575 900  5575
+Connection ~ 1000 5575
+Wire Wire Line
+	900  5575 800  5575
+Connection ~ 900  5575
+Wire Wire Line
+	700  5575 800  5575
+Connection ~ 800  5575
+NoConn ~ 1825 4950
+NoConn ~ 1825 5050
+$Comp
+L op6-jig-rescue:R-Device R1
+U 1 1 618C2F38
+P 1825 3275
+F 0 "R1" H 1895 3321 50  0000 L CNN
+F 1 "5.1k" H 1895 3230 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 1755 3275 50  0001 C CNN
+F 3 "~" H 1825 3275 50  0001 C CNN
+F 4 "C27834" H 1825 3275 50  0001 C CNN "LCSC"
+	1    1825 3275
+	1    0    0    -1  
+$EndComp
+$Comp
+L op6-jig-rescue:R-Device R2
+U 1 1 618D2892
+P 2175 3275
+F 0 "R2" H 2245 3321 50  0000 L CNN
+F 1 "5.1k" H 2245 3230 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2105 3275 50  0001 C CNN
+F 3 "~" H 2175 3275 50  0001 C CNN
+F 4 "C27834" H 2175 3275 50  0001 C CNN "LCSC"
+	1    2175 3275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1825 3050 1825 3125
+Wire Wire Line
+	2175 2950 2175 3125
+Wire Wire Line
+	2175 3425 1825 3425
+$Comp
+L op6-jig-rescue:GND-power #PWR0116
+U 1 1 6191908A
+P 2175 3475
+F 0 "#PWR0116" H 2175 3225 50  0001 C CNN
+F 1 "GND" H 2180 3302 50  0000 C CNN
+F 2 "" H 2175 3475 50  0001 C CNN
+F 3 "" H 2175 3475 50  0001 C CNN
+	1    2175 3475
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1825 2950 2175 2950
+Wire Wire Line
+	2175 3475 2175 3425
+Connection ~ 2175 3425
+$Comp
+L op6-jig-rescue:R-Device R8
+U 1 1 610F6670
+P 7250 1750
+F 0 "R8" H 7320 1796 50  0000 L CNN
+F 1 "5.6k" H 7320 1705 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 7180 1750 50  0001 C CNN
+F 3 "~" H 7250 1750 50  0001 C CNN
+F 4 "C4382" H 7250 1750 50  0001 C CNN "LCSC"
+	1    7250 1750
+	1    0    0    -1  
+$EndComp
+Text GLabel 6425 2150 2    50   Input ~ 0
+ATMEGA_PC6
+Text GLabel 6425 2250 2    50   Input ~ 0
+ATMEGA_PC7
+Text GLabel 6425 2450 2    50   Input ~ 0
+ATMEGA_PD0
+Text GLabel 6425 2550 2    50   Input ~ 0
+ATMEGA_PD1
+Wire Wire Line
+	6100 2150 6425 2150
+Wire Wire Line
+	6100 2250 6425 2250
+Wire Wire Line
+	6100 2450 6425 2450
+Wire Wire Line
+	6100 2550 6425 2550
+Text GLabel 9150 4050 0    50   Input ~ 0
+ATMEGA_PC6
+Text GLabel 9150 3950 0    50   Input ~ 0
+ATMEGA_PC7
+Text GLabel 9150 3850 0    50   Input ~ 0
+ATMEGA_PD0
+Text GLabel 9150 3750 0    50   Input ~ 0
+ATMEGA_PD1
 $EndSCHEMATC

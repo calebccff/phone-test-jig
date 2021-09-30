@@ -2,7 +2,7 @@
 
 The OnePlus 6 test jig is a proof of concept designed to turn the OnePlus 6 into a device which can be used in a board farm!
 
-<img src="images/pcb-screenshot.png" width="50%" alt="OnePlus 6 Jig 3D view screenshot"/>
+<img src="https://git.sr.ht/~calebccff/rptr-pcb/blob/main/images/pcb-screenshot.png" width="50%" alt="OnePlus 6 Jig 3D view screenshot"/>
 
 The jig contains holes at specific locations which line up with test points on the phone, spring loaded contact probes or "pogo pins" can then be
 inserted to make contact with the pins on the phone. The PCB features an Atmega32u4 which can act as a UART<->USB adapter, an LSF0102

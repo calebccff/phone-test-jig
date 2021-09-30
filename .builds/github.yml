@@ -10,4 +10,4 @@ tasks:
       ssh-keyscan github.com >> ~/.ssh/known_hosts
       cd rptr-pcb
       git remote add github git@github.com:calebccff/phone-test-jig.git
-      git push github --all 
+      git push github --all --force

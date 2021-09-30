@@ -27,5 +27,7 @@ fp-info-cache
 *.xml
 *.csv
 
+*.zip
+
 gerber/
 plots/

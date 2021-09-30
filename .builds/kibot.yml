@@ -1,0 +1,21 @@
+image: alpine/edge
+secrets:
+packages:
+  - python3
+  - python3-dev
+  - linux-headers
+  - py3-setuptools
+  - py3-pip
+  - py3-xlsxwriter
+  - py3-yaml
+  - xdotool
+  - kicad
+sources:
+  - https://git.sr.ht/~calebccff/rptr-pcb
+tasks:
+  - install: |
+      sudo pip3 install --no-compile kibot
+  - build: |
+      cd rptr-pcb
+      kibot -c rptr.kibot.yaml -d out
+      tar -czvf rptr-pcb.tar.gz out/

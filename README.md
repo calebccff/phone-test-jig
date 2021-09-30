@@ -4,9 +4,9 @@ The OnePlus 6 test jig is a proof of concept designed to turn the OnePlus 6 into
 
 <img src="https://git.sr.ht/~calebccff/rptr-pcb/blob/main/images/pcb-screenshot.png" width="50%" alt="OnePlus 6 Jig 3D view screenshot"/>
 
-The jig contains holes at specific locations which line up with test points on the phone, spring loaded contact probes or "pogo pins" can then be
-inserted to make contact with the pins on the phone. The PCB features an Atmega32u4 which can act as a UART<->USB adapter, an LSF0102
-bidirectional logic level voltage translator to convert the UART from the 5v of the Atmega down to the 1.8v of the phone (and vice versa).
+The PCB contains a header at the top for soldering wires onto test points on the phone, it features an Atmega32u4 which can act as a
+UART<->USB adapter, an LSF0102 bidirectional logic level voltage translator to convert the UART from the 5v of the Atmega down to the
+1.8v of the phone (and vice versa).
 
 The Atmega is also used to simulate button presses on the phone, the volume and power button test pads are normally high and pressed when low.
 Both of these features can be (though as yet untested) exposed via the same USB port, saving a port on the host and allowing for dirt simple 
@@ -21,6 +21,6 @@ MOSFET.
 
 ## TODO
 
-* Fix differential pair routing
-* Add support for more devices by using a daughter board for the test points
+* Create a list of minimum hard requirements for a given device to be used as part of the farm
+* Add a 12v connector and buck regulator to produce VBAT for devices which support it so that the batteries can be removed.
 * Add PHONE_USB passthrough port so that devices without USB test points can still have VBUS be controlled by the atmega

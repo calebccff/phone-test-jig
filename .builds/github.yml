@@ -1,0 +1,13 @@
+image: alpine/edge
+secrets:
+  - 74e752dd-04d9-4a4b-9ebb-24d62283538c
+packages:
+  - git
+sources:
+  - https://git.sr.ht/~calebccff/rptr-pcb
+tasks:
+  - push-to-github: |
+      ssh-keyscan github.com >> ~/.ssh/known_hosts
+      cd rptr-pcb
+      git remote add github git@github.com:calebccff/phone-test-jig.git
+      git push github --all 
